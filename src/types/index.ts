@@ -39,3 +39,11 @@ export interface SearchedGtihubUsers {
   incomplete_results: boolean;
   items: GithubUser[];
 }
+
+export interface GlobalState {
+  users: GithubUser[];
+  loading?: boolean;
+  fetchUser: () => void;
+}
+
+export type ReducerState = Omit<GlobalState, 'fetchUser'>;

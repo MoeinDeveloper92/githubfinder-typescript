@@ -5,15 +5,14 @@ import About from './pages/About';
 import Home from './pages/Home';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
+
 const App = () => {
-  console.log(import.meta.env.VITE_GITHUB_API_TOKEN);
-  console.log(import.meta.env.VITE_GITHUB_URL);
   return (
     <div className="flex flex-col justify-between h-screen">
       <Navbar />
 
       <Container>
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
