@@ -1,11 +1,11 @@
 import { createContext, useReducer } from 'react';
-
 import { GlobalState } from '../../types';
 import { GithubUser } from '../../types';
 const githubToken = import.meta.env.VITE_GITHUB_API_TOKEN;
 const githubUrl = import.meta.env.VITE_GITHUB_URL;
 import githubReducer from './githubReducer';
 import { ReducerState } from '../../types';
+
 //Defining the global state
 const GithubContext = createContext<GlobalState | null>(null);
 
